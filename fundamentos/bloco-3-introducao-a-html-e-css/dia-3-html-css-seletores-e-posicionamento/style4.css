@@ -1,0 +1,28 @@
+div:hover {
+    border-radius: 2px;
+    border-width: 3px;
+    border-style: dotted;
+    border-color: black; 
+}
+#div1 {
+   background-color: aqua; 
+}
+#div2 {
+    background-color: yellow;
+}
+#div3 {
+    background-color: green;
+    size: 1.5em;
+}
+#div4 {
+    background-color: red;
+}
+#div5 {
+    background-color: orange;
+}
+
+h3 {
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
