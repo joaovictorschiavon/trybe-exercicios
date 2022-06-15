@@ -1,0 +1,61 @@
+ol {
+    background-color: yellow;
+}
+
+ol li:nth-child(even) {
+    color: green;
+}
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+:where(h1, h2, h3, h4, h5, h6) em {
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li {
+    size: 20px;
+}
+
+li em {
+    font-weight: 800;
+}
+
+.linguagem li:nth-child(n):nth-child(-n+3) {
+    color: blue;
+}
+
+/* pseudoclasse :contains() foi deprecada */
+
+.java {
+    background-color: pink;
+}
+
+#aliados li a:hover {
+    font-weight: bold;
+}
+
+#aliados li a[href*="stackoverflow"] {
+    color: orange;
+}
+
+#aliados li a[href*="w3schools"] {
+    color: green;
+}
+
+#aliados li a[href*="mozilla"] {
+    color: black;
+}
+
+#aliados li a[href*="devdocs"] {
+    color: yellow;
+}
+
+#aliados li a[href*="trybe"] {
+    color: green;
+}

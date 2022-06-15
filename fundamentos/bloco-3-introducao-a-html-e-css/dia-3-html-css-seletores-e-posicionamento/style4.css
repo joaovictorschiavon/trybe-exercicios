@@ -4,25 +4,29 @@ div:hover {
     border-style: dotted;
     border-color: black; 
 }
-#div1 {
+div:nth-of-type(1) {
    background-color: aqua; 
 }
-#div2 {
+div:nth-of-type(2) {
     background-color: yellow;
 }
-#div3 {
+div:nth-of-type(3) {
     background-color: green;
-    size: 1.5em;
+    font-size: larger;
 }
-#div4 {
+div:nth-of-type(4) {
     background-color: red;
 }
-#div5 {
+div:nth-of-type(5) {
     background-color: orange;
 }
 
 h3 {
-    font-style: italic;
+    font-style:oblique;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
+}
+
+h3:nth-child(odd) h3 {
+    font-style: italic;
 }
