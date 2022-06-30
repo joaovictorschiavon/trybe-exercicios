@@ -59,7 +59,8 @@
     <script>
       function addElement (tag, text) {
 		let newTag = document.createElement(tag);
-		let content = document.createTextNode(text);
+		newTag.innerText = text;
+		return newTag
 	  }
 
 	  // 1.Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body; 
@@ -67,17 +68,22 @@
 
 	  // 2.Adicione a tag main com a classe main-content como filho da tag body; 
 	  document.body.appendChild(addElement('main', ''));
-	  let element1 = document.getElementsByTagName('main');
+	  let element1 = document.getElementsByTagName('main')[0];
 	  element1.className = "main-content";
 
 	  // 3.Adicione a tag section com a classe center-content como filho da tag main criada no passo 2; 
 	  element1.appendChild(addElement('section', ''));
-	  let element2 = element1.getElementsByTagName('section');
+	  let element2 = element1.getElementsByTagName('section')[0];
 	  element2.className = 'center-content';
 
 	  // 4.Adicione a tag p como filho do section criado no passo 3 e coloque algum texto; 
 	  element2.appendChild(addElement('p', 'mock text here'));
-	  
+
+	  // 5 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+	  element1.appendChild(addElement('section', ''));
+	  let element3 = element1.getElementsByTagName('section')[1];
+	  element3.className = 'left-content';
+
     </script>
   </body>
 </html>
