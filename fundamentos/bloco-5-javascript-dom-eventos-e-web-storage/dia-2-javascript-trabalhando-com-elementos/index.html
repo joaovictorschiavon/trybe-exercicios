@@ -84,6 +84,22 @@
 	  let element3 = element1.getElementsByTagName('section')[1];
 	  element3.className = 'left-content';
 
+	  // 6.Adicione a tag section com a classe right-content como filho da tag main criada no passo 2; 
+	  element1.appendChild(addElement('section', ''));
+	  let element4 = element1.getElementsByTagName('section')[2];
+	  element4.className = 'right-content';
+
+	  // 7.Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe 
+	  // small-image. Esse elemento deve ser filho do section criado no passo 5; 
+	  element3.appendChild(addElement('img', ''));
+	  let element5 = element3.getElementsByTagName('img')[0];
+	  element5.setAttribute('src', 'https://picsum.photos/200');
+	  element5.className = 'small-image';
+
+	  // 8.Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, 
+	  // três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+	  
+
     </script>
   </body>
 </html>
