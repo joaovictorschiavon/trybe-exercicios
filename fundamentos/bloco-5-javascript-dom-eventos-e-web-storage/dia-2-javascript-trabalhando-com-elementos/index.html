@@ -130,9 +130,14 @@
     // right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
     element4.style.marginRight = 'auto';
 
-    // alt5.
-    
-    
+    // alt5.Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui 
+    // a classe center-content) para a cor verde; 
+    element2.style.backgroundColor = 'green';
+
+    // alt6.Remova os dois últimos elementos (nove e dez) da lista criada no passo 8. 
+    for (let l = 0; l < 2; l += 1) {
+      element6.lastElementChild.remove();
+    }
     </script>
   </body>
 </html>
