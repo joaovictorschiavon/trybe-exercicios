@@ -106,9 +106,21 @@
 	  }
 
 	  // 9.Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
-	  for (let j = 0; i < 3; i += 1) {
-		  element1.appendChild(addElement('h3', ''));
+	  for (let j = 0; j < 3; j += 1) {
+		  element1.appendChild(addElement('h3', 'H3'));
 	  }
+
+    // alt1.Adicione a classe title na tag h1 criada; 
+    let element7 = document.getElementsByTagName('h1')[0];
+    element7.className = 'title';
+
+    // al2.Adicione a classe description nas 3 tags h3 criadas; 
+    let element8 = '';
+    for (let k = 0; k < 3; k += 1) {
+      element8 = document.getElementsByTagName('h3')[k];
+      element8.className = 'description';
+    }
+
     </script>
   </body>
 </html>
