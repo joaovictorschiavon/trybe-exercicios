@@ -97,6 +97,16 @@ element3.addEventListener('click', changeFriday);
 
 // exercício 6
 
+function zoomIn(event) {
+	event.target.style.fontSize = '200%';
+}
 
+function zoomOut() {
+	event.target.style.fontSize = '100%';
+}
 
-
+let HTMLcol3 = elementParent1.getElementsByTagName('li');
+for (let n of HTMLcol3) {
+	n.addEventListener('mouseover', zoomIn);
+	n.addEventListener('mouseout', zoomOut);
+}
