@@ -101,8 +101,8 @@ function zoomIn(event) {
 	event.target.style.fontSize = '200%';
 }
 
-function zoomOut() {
-	event.target.style.fontSize = '100%';
+function zoomOut(event1) {
+	event1.target.style.fontSize = '100%';
 }
 
 let HTMLcol3 = elementParent1.getElementsByTagName('li');
@@ -110,3 +110,53 @@ for (let n of HTMLcol3) {
 	n.addEventListener('mouseover', zoomIn);
 	n.addEventListener('mouseout', zoomOut);
 }
+
+// exercício 7
+
+let flagTask = true;
+
+function checkTask(flagTask) {
+	let HTMLcol4 = elementParent1.getElementsByTagName('li');
+	if (flagTask) {
+		for (let o of HTMLcol4) {
+			flagTask = false;
+			o.addEventListener('click', function() {highLight(event2, flagTask);});
+		}
+	} else {
+		for (let o of HTMLcol4) {
+			flagTask = true;
+			o.removeEventListener('click', function() {highLight(event2, flagTask);});
+		}
+	}
+}
+
+console.log (flagTask);
+function highLight(event2, flagTask) {
+	console.log(flagTask);
+	if (event2.target.style.color = 'red') {
+		console.log(flagTask, event2.target)
+		event2.target.style.color = 'rgb(199, 199, 199)';
+		return flagTask;
+	} else {
+		console.log(flagTask, event2.target)
+		event2.target.style.color = 'red';
+		return flagTask;
+	}
+}
+
+let element4 = document.getElementsByClassName('my-tasks')[0];
+let element5 = element4.appendChild(addElement('h3', 'Cook', 'task'));
+element5.addEventListener('click', function() {checkTask(flagTask);});
+
+console.log(flagTask)
+// exercício 8
+
+
+// exercício 9
+
+
+// exercício 10
+
+
+// Bônus
+
