@@ -9,15 +9,44 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
+  // Devido a propriedade CSS transform
+
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+
+let element1 = document.getElementsByClassName('container')[0];
+let htmlcol1 = element1.getElementsByTagName('li');
+for (let i of htmlcol1) {
+  i.addEventListener('click', changeTechClick);
+}
+
+function changeTechClick(event1) {
+  for (let j of htmlcol1) {
+    j.className = '';
+  }
+  event1.target.className = "tech";
+}
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
+document.getElementById('input').addEventListener('input', inputTech);
+function inputTech() {
+  let inputText = document.getElementById('input').value;
+  let element2 = document.getElementsByClassName('tech')[0];
+  element2.innerText = inputText;
+}
+
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
+
+let element3 = document.getElementById('my-spotrybefy');
+element3.addEventListener('dblclick', redirect);
+
+function redirect() {
+  window.open("https://www.github.com/joaovictorschiavon/", "_blank").focus();
+}
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
@@ -34,6 +63,17 @@ function resetText(event) {
 
 firstLi.addEventListener('dblclick', resetText);
 
+element3.addEventListener('mouseover', changeColor);
+element3.addEventListener('mouseout', changeColorBack);
+
+function changeColor(event2) {
+  event2.target.style.color = 'purple';
+}
+
+function changeColorBack(event3) {
+  event3.target.style.color = 'white';
+}
+
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
-// event.target na nossa função retornará o objeto 'firstLi'git
+// event.target na nossa função retornará o objeto 'firstLi'.
