@@ -51,4 +51,25 @@ for (let i in decemberDaysList) {
 let element1 = document.getElementsByClassName('buttons-container')[0];
 element1.appendChild(addElement('button', 'Feriados', '')).setAttribute('id', 'btn-holiday');
 
+// exercício 3
+
+function colorHoliday() {
+	let HTMLcol1 = document.getElementsByTagName('li');
+	for (let l of HTMLcol1) {
+		if (l.classList.contains('holiday')) {
+			if (l.style.backgroundColor === 'rgb(238, 238, 238)') {
+				l.style.backgroundColor = 'orange';
+			} else {
+				l.style.backgroundColor = 'rgb(238, 238, 238)';
+			}
+		}	
+	}
+}
+
+
+let element2 = document.getElementById('btn-holiday');
+element2.addEventListener('click', colorHoliday);
+
+
+
 
