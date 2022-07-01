@@ -72,6 +72,31 @@ element2.addEventListener('click', colorHoliday);
 
 // exercício 4
 
+element1.appendChild(addElement('button', 'Sexta-feira', '')).setAttribute('id', 'btn-friday');
+
+// exercício 5
+
+function changeFriday() {
+	let fridays = [4, 11, 18, 25];
+	let fridaysCount = 0;
+	let HTMLcol2 = document.getElementsByTagName('li');
+	for (let m of HTMLcol2) {
+		if (m.classList.contains('friday')) {
+			if (m.innerText === 'Sexta-feira') {
+				m.innerText = fridays[fridaysCount];
+				fridaysCount +=1;
+			} else {
+				m.innerText = 'Sexta-feira';
+			}
+		}		
+	}
+}
+
+let element3 = document.getElementById('btn-friday');
+element3.addEventListener('click', changeFriday);
+
+// exercício 6
+
 
 
 
