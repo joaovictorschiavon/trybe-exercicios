@@ -70,6 +70,8 @@ function colorHoliday() {
 let element2 = document.getElementById('btn-holiday');
 element2.addEventListener('click', colorHoliday);
 
+// exercício 4
+
 
 
 
