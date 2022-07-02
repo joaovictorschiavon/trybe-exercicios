@@ -113,6 +113,31 @@ for (let n of HTMLcol3) {
 
 // exercício 7
 
+function addTask(string1) { 
+	let element4 = document.getElementsByClassName('my-tasks')[0];
+	element4.appendChild(addElement('span', string1, 'task'));
+}
+
+addTask('Cook');
+
+// exercício 8
+
+function changeColorTask(color) {
+	let element5 = document.getElementsByClassName('my-tasks')[0];
+	let element6 = element5.appendChild(addElement('div', '', 'task'));
+	element6.style.backgroundColor = color;
+}
+
+changeColorTask('orange')
+
+// exercício 9
+
+
+// exercício 10
+
+
+// Bônus
+
 let flagTask = true;
 
 function checkTask(flagTask) {
@@ -144,19 +169,4 @@ function highLight(event2, flagTask) {
 	}
 }
 
-let element4 = document.getElementsByClassName('my-tasks')[0];
-let element5 = element4.appendChild(addElement('h3', 'Cook', 'task'));
 element5.addEventListener('click', function() {checkTask(flagTask);});
-
-console.log(flagTask)
-// exercício 8
-
-
-// exercício 9
-
-
-// exercício 10
-
-
-// Bônus
-
