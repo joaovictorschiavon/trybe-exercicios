@@ -115,7 +115,7 @@ for (let n of HTMLcol3) {
 
 function addTask(string1) { 
 	let element4 = document.getElementsByClassName('my-tasks')[0];
-	element4.appendChild(addElement('span', string1, 'task'));
+	element4.appendChild(addElement('span', string1, ''));
 }
 
 addTask('Cook');
@@ -133,7 +133,6 @@ changeColorTask('orange')
 // exercício 9
 
 let element7 = document.querySelector('div.task');
-document.write(element7)
 element7.addEventListener('click', taskSelect);
 
 function taskSelect() {
@@ -142,24 +141,25 @@ function taskSelect() {
 
 // exercício 10
 
+setColorInDays();
 function setColorInDays() {
-	let nodeList1 = document.querySelector('#days');
 	let HTMLcol5 = document.getElementsByClassName('task selected');
+	let nodeList1 = document.querySelector('#days');
 	let nodeList2 = document.querySelector('.task');
 	let projectColor = nodeList2.style.backgroundColor;
 	
 	nodeList1.addEventListener('click', function(event3){
-		let colorToChange = this.style.color;
-		if (nodeList1.length > 0 && colorToChange != projectColor) {
-			let colorApply = nodeList1[0].style.backgroundColor;
-			this.style.color = colorApply;
+		let colorToChange = event3.target.style.color;
+		if (HTMLcol5.length > 0 && colorToChange !== projectColor) {
+			let colorApply = HTMLcol5[0].style.backgroundColor;
+			event3.target.style.color = colorApply;
 		} else if (colorToChange === projectColor) {
-			this.style.color = 'rgb(199,199,199)';
+			event3.target.style.color = '#777';
 		}
 	});
 
 }
-setColorInDays();
+
 
 // Bônus
 
