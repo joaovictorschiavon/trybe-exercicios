@@ -142,38 +142,60 @@ function taskSelect() {
 
 // exercício 10
 
+function setColorInDays() {
+	let nodeList1 = document.querySelector('#days');
+	let HTMLcol5 = document.getElementsByClassName('task selected');
+	let nodeList2 = document.querySelector('.task');
+	let projectColor = nodeList2.style.backgroundColor;
+	
+	nodeList1.addEventListener('click', function(event3){
+		let colorToChange = this.style.color;
+		if (nodeList1.length > 0 && colorToChange != projectColor) {
+			let colorApply = nodeList1[0].style.backgroundColor;
+			this.style.color = colorApply;
+		} else if (colorToChange === projectColor) {
+			this.style.color = 'rgb(199,199,199)';
+		}
+	});
+
+}
+setColorInDays();
 
 // Bônus
 
-let flagTask = true;
 
-function checkTask(flagTask) {
-	let HTMLcol4 = elementParent1.getElementsByTagName('li');
-	if (flagTask) {
-		for (let o of HTMLcol4) {
-			flagTask = false;
-			o.addEventListener('click', function() {highLight(event2, flagTask);});
-		}
-	} else {
-		for (let o of HTMLcol4) {
-			flagTask = true;
-			o.removeEventListener('click', function() {highLight(event2, flagTask);});
-		}
-	}
-}
 
-console.log (flagTask);
-function highLight(event2, flagTask) {
-	console.log(flagTask);
-	if (event2.target.style.color = 'red') {
-		console.log(flagTask, event2.target)
-		event2.target.style.color = 'rgb(199, 199, 199)';
-		return flagTask;
-	} else {
-		console.log(flagTask, event2.target)
-		event2.target.style.color = 'red';
-		return flagTask;
-	}
-}
 
-element5.addEventListener('click', function() {checkTask(flagTask);});
+// Tentativa diferente exercício 7 a 10 in one time(errado)
+// let flagTask = true;
+
+// function checkTask(flagTask) {
+// 	let HTMLcol4 = elementParent1.getElementsByTagName('li');
+// 	if (flagTask) {
+// 		for (let o of HTMLcol4) {
+// 			flagTask = false;
+// 			o.addEventListener('click', function() {highLight(event2, flagTask);});
+// 		}
+// 	} else {
+// 		for (let o of HTMLcol4) {
+// 			flagTask = true;
+// 			o.removeEventListener('click', function() {highLight(event2, flagTask);});
+// 		}
+// 	}
+// }
+
+// console.log (flagTask);
+// function highLight(event2, flagTask) {
+// 	console.log(flagTask);
+// 	if (event2.target.style.color = 'red') {
+// 		console.log(flagTask, event2.target)
+// 		event2.target.style.color = 'rgb(199, 199, 199)';
+// 		return flagTask;
+// 	} else {
+// 		console.log(flagTask, event2.target)
+// 		event2.target.style.color = 'red';
+// 		return flagTask;
+// 	}
+// }
+
+// element5.addEventListener('click', function() {checkTask(flagTask);});
