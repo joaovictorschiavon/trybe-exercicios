@@ -132,6 +132,13 @@ changeColorTask('orange')
 
 // exercício 9
 
+let element7 = document.querySelector('div.task');
+document.write(element7)
+element7.addEventListener('click', taskSelect);
+
+function taskSelect() {
+	this.classList.toggle('selected');
+}
 
 // exercício 10
 
