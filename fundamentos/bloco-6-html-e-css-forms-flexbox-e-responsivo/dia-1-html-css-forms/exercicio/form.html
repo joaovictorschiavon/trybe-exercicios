@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>TrybeTrip</title>
+</head>
+<body>
+	<fieldset>
+		<form action="" id="form-content">
+			<label for="input-name" id="">Name:
+				<input type="text" name="nome" id="input-name" minlength="10" maxlength="40">
+			</label>
+			<br>
+			<label for="input-email" id="">E-mail:
+				<input type="email" name="" id="input-email" minlength="10" maxlength="50">
+			</label>
+			<br>
+			<input type="radio" name="destiny" id="city">Cidade
+			<input type="radio" name="destiny" id="country">Campo
+			<input type="radio" name="destiny" id="beach">Praia
+			<input type="radio" name="destiny" id="mountain">Montanhas
+			<br>
+			<label for="input-textarea">Espaço para digitar a resposta:
+				<br>
+				<textarea name="why" id="input-textarea" cols="50" rows="10"></textarea>
+			</label>
+			<br>
+			<label for="input-date">Data:
+				<input type="date" name="data" id="input-date">
+			</label>
+			<br>
+			<label for="check-news">Gostaria de receber novidades sobre a Trybe
+				<input type="checkbox" name="Novidades" id="check-news">
+			</label>
+			<br>
+			<label for="check-agree">Concordo que minhas imagens das férias poderam ser utilizadas pela Trybe
+				<input type="checkbox" name="Concordo" id="check-agree">
+			</label>
+		</form>
+	</fieldset>
+	<button type="submit" id="btn-submit">Enviar</button>
+	<button type="reset" id="btn-reset">Apagar</button>
+	<script src="script.js"></script>
+</body>
+</html>
