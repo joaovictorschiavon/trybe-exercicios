@@ -6,3 +6,4 @@ const uppercase = (str, callback) => {
 	  callback(str.toUpperCase());
 	}, 500);
 };
+

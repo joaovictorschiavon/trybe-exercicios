@@ -22,14 +22,15 @@ const pokemons = [
 	},
   ];
   
-  function getPokemonDetails(filter, callback) {
+  function getPokemonDetails(chosenPokemon, callback) {
+	const thePokemon = pokemons.find((pokemon) => pokemon.name === chosenPokemon); 
+	
 	setTimeout(() => {
-	  if (pokemons.find(filter) === undefined) {
+	  if (thePokemon === undefined) {
 		return callback(new Error('Não temos esse pokémon para você :('), null);
 	  }
-	  const pokemon = pokemons.find(filter);
   
-	  const { name, type, ability } = pokemon;
+	  const { name, type, ability } = thePokemon;
   
 	  const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
   
@@ -37,7 +38,15 @@ const pokemons = [
 	}, 2000);
   }
   
-  getPokemonDetails();
+  const handlePokemonSearch = (error, message) => {
+	if (error) {
+		console.log(error);
+	} else {
+		console.log(message);
+	}
+  };
+
+  getPokemonDetails( "Squirtle", handlePokemonSearch);
   
   module.exports = {
 	getPokemonDetails,
